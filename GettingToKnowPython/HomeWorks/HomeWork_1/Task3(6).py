@@ -8,17 +8,33 @@
 385916 -> yes
 123456 -> no
 """
-happy_ticket = input("Введите номер счастливого билета: ")
-the_number_is_correct = False
+chek = False
 
-while the_number_is_correct == False: # Проверка введенного на количество символов
-
-    happy_ticket = input("Введите номер счастливого билета: ")
-        try: ((len(str(happy_ticket)) != 6)
-            #print("Счастливый номер должен быть шестизначным. Введите счастливый номер еще раз")
-
-    the_number_is_correct = True
-
-    print('Вы ввели не число')
+while chek == False: # Проверка введенного выражения, чтобы было 6-ти значное положительное число.
+    
+    try:
+        happy_ticket = int(input("Введите номер билета: "))
+    except ValueError:
+        print("Номер билета должен быть простым числом, а введено что-то другое. Попробуйте ещё раз.")
     else:
-    print('Вы ввели не число')
+        if int(happy_ticket) < 100000  or int(happy_ticket) > 999999:
+            print("Номер билета должен состоять из шести цифр, которые составляют положительное число!Попробуйте ещё раз.")
+            chek = False
+        else:
+            chek = True
+
+sum_left = 0
+sum_right = 0
+
+for i in range(6):
+    if i<3:
+        sum_right += happy_ticket // 10**i % 10
+    else:
+        sum_left  += happy_ticket // 10**i % 10 
+
+
+if sum_left == sum_right:
+    print(f"{sum_left} равно {sum_right}, значит билет является счастливым! Можно билет есть! ))")
+else:
+    print(f"{sum_left} не равно {sum_right}, билет не является счастливым.")  
+   
