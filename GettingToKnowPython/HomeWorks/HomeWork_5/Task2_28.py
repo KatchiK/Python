@@ -15,3 +15,4 @@ def amount(a, b):
     return amount(a+1, b-1)
 
 print(amount(num_a, num_b))
+#потом коммент удалить

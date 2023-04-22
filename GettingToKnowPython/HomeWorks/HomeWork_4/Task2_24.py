@@ -21,3 +21,5 @@ for i in range(len(lst)-1):
 lst_count.append(lst[-2] + lst[-1] + lst[0])
 print(max(lst_count))
 
+
+#потом коммент удалить

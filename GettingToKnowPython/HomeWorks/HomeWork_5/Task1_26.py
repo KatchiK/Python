@@ -15,3 +15,4 @@ def exponentiation(a, b):
     return a * exponentiation(a, b-1)
 
 print(exponentiation(num_a, num_b))
+#потом коммент удалить
