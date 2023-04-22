@@ -10,3 +10,14 @@
 которое может собрать за один заход собирающий модуль, 
 находясь перед некоторым кустом заданной во входном файле грядки.
 """
+n = int(input())
+lst = list()
+for i in range(n):
+    x = int(input())
+    lst.append(x)
+lst_count = list()
+for i in range(len(lst)-1):
+    lst_count.append(lst[i - 1] + lst[i] + lst[i + 1])
+lst_count.append(lst[-2] + lst[-1] + lst[0])
+print(max(lst_count))
+
