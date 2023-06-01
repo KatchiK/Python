@@ -6,7 +6,8 @@ def start():
         view.menu()
         answer = input('Введите команду: ')
         if answer == '1':
-            model.show() # вывод контактов
+            contact_lst = model.read_file
+            view.show(contact_lst) # вывод контактов
         elif answer == '2':
             model.add_contact() # добавить контакты
         elif answer == '3':
