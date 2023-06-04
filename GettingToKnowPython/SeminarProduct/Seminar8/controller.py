@@ -6,12 +6,13 @@ def start():
         view.menu()
         answer = input('Введите команду: ')
         if answer == '1':
-            contact_lst = model.read_file
+            contact_lst = model.read_file()
             view.show(contact_lst) # вывод контактов
         elif answer == '2':
-            model.add_contact() # добавить контакты
+            model.creating_contact(view.input_data()) # добавить контакты
         elif answer == '3':
-            model.search() # поиск
+            view.show_search(model.search(view.search_input())) # поиск
+            #model.search(()) 
         elif answer == '4':
             view.bye()
             break # выход

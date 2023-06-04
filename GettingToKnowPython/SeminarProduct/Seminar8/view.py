@@ -10,6 +10,20 @@ def menu():
           )
     #pass 
 
-def show(contact_lst: list):
+def show(contact_lst):
+    
     for contact in contact_lst:
         print(contact)
+    
+def input_data():
+    return input("Введите Имя")
+
+def show_search(contact):
+        print(contact)
+
+def search_input():
+    return input("Введите поисковый запрос")
+
+def bye():
+    print("Благодарим за использование программы")
+    
